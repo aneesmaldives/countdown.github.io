@@ -1,1 +1,104 @@
-# countdown.github.io
+<!doctype html>
+<html>
+<head>	
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Pragmatic Mates s.r.o. - http://pragmaticmates.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+
+	<title>Maafushi School Countdown</title>
+</head>
+
+<body>
+
+<div class="countdown countdown-container container">
+    <h1 style="color: honeydew; font-size: 50px;" align="centre">&nbsp;</h1>
+    <h1 style="color: honeydew" align="centre">&nbsp;</h1>
+    <h1 style="color: honeydew" align="centre">&nbsp;</h1>
+    <div class="clock row">
+        <div class="clock-item clock-days countdown-time-value col-sm-6 col-md-3">
+            <div class="wrap">
+                <div class="inner">
+                    <div id="canvas-days" class="clock-canvas"></div>
+
+                    <div class="text">
+                        <p class="val">0</p>
+                        <p class="type-days type-time">DAYS</p>
+                    </div><!-- /.text -->
+                </div><!-- /.inner -->
+            </div><!-- /.wrap -->
+        </div><!-- /.clock-item -->
+
+        <div class="clock-item clock-hours countdown-time-value col-sm-6 col-md-3">
+            <div class="wrap">
+                <div class="inner">
+                    <div id="canvas-hours" class="clock-canvas"></div>
+
+                    <div class="text">
+                        <p class="val">0</p>
+                        <p class="type-hours type-time">HOURS</p>
+                    </div><!-- /.text -->
+                </div><!-- /.inner -->
+            </div><!-- /.wrap -->
+        </div><!-- /.clock-item -->
+
+        <div class="clock-item clock-minutes countdown-time-value col-sm-6 col-md-3">
+            <div class="wrap">
+                <div class="inner">
+                    <div id="canvas-minutes" class="clock-canvas"></div>
+
+                    <div class="text">
+                        <p class="val">0</p>
+                        <p class="type-minutes type-time">MINUTES</p>
+                    </div><!-- /.text -->
+                </div><!-- /.inner -->
+            </div><!-- /.wrap -->
+        </div><!-- /.clock-item -->
+
+        <div class="clock-item clock-seconds countdown-time-value col-sm-6 col-md-3">
+            <div class="wrap">
+                <div class="inner">
+                    <div id="canvas-seconds" class="clock-canvas"></div>
+
+                    <div class="text">
+                        <p class="val">0</p>
+                        <p class="type-seconds type-time">SECONDS</p>
+                    </div><!-- /.text -->
+                </div><!-- /.inner -->
+            </div><!-- /.wrap -->
+        </div><!-- /.clock-item -->
+    </div><!-- /.clock -->
+</div><!-- /.countdown-wrapper -->
+<!--<div id="player">-->
+    <!--<audio autoplay hidden loop>-->
+        <!--<source src="countdown1.wav" type="audio/mpeg">-->
+        <!--If you're reading this, audio isn't supported.-->
+    <!--</audio>-->
+<!--</div>-->
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/kinetic.js"></script>
+<script type="text/javascript" src="../jquery.final-countdown.js"></script>
+<script type="text/javascript">  
+    $('document').ready(function() {
+        'use strict';
+
+        //console.log(Math.round(+new Date('2017-10-17')/1000));
+
+    	$('.countdown').final_countdown({
+            //'start': Math.round(+new Date()/1000),
+            'start': Math.round(+new Date('2021-11-21')/1000),
+            'end': Math.round(+new Date('2026-01-28 9:0:0')/1000),
+            'now': Math.round(+new Date()/1000)
+        });
+    });
+</script>
+
+</body>
+</html>
